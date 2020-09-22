@@ -1,0 +1,287 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.hide{
+  display: none;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.color-green{
+  color: green;
+}
+
+.color-red{
+  color: red;
+}
+
+.color-blue{
+  color: #409EFF;
+}
+
+.pointer{
+  cursor:pointer;
+}
+
+.flex{
+  display: flex;;
+}
+
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexable{
+  flex: 1 1 auto;
+}
+
+.flex-static{
+  flex: 0 0 auto;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.horizontal {
+  word-spacing: -1em;
+  >* {
+    word-spacing: 1em;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.v-mid-all{
+  >*{
+    vertical-align: middle;
+  }
+}
+
+.mar-r-5{
+  margin-right: 5px;
+}
+
+.mar-r-10{
+  margin-right: 10px;
+}
+
+.v-mid{
+  vertical-align: middle;
+}
+
+.btn-mini-s{
+  height: 20px !important;
+  width: 20px !important;
+  padding: 0 !important;
+  position: relative;
+  [class*=" el-icon-"], [class^=el-icon-]{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+// main-container 全局样式
+.app-container {
+  padding: 20px;
+}
+
+// 分页器
+.main_pagination{
+  text-align: right;
+  padding-top: 20px !important;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+.main_pagination ul{
+  width: auto;
+}
+
+// 页面顶部说明
+.page-desc{
+  margin: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+// 页面输入框旁边说明
+.text-desc{
+  margin: 1px;
+  font-size: 12px;
+  color: #aaa;
+}
+.chart-filter{
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #ddd;
+  .time-range-wrap{
+    .break{
+      margin: 0 20px;
+    }
+    .getChartData{
+      margin-left: 20px;
+    }
+  }
+}
+// 搜索框
+.search-bar{
+  justify-content: space-between;
+  .filter{
+    padding-top: 22px;
+    .filter-item{
+      margin-left: 25px;
+      min-width: 200px;
+    }
+    .el-form-item__label{
+      white-space: nowrap;
+    }
+  }
+  .search-btnGroup{
+    margin: 22px;
+    .el-button{
+      height: 40px;
+    }
+  }
+
+}
+
+// 懒加载图片
+.avator-img{
+  &[lazy="error"]{
+    width: 100px !important;
+    height: 86px !important;
+  }
+  &[lazy="loading"]{
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+// 图表icon
+.chart-tool-item{
+  align-items: center;
+  line-height: 25px;
+  .chart-tool-icon{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+    overflow: hidden;
+  }
+}
+
+.info-imgBox{
+  padding: 10px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  .img-item{
+    margin-right: 30px;
+    img{
+      line-height: 1em;
+      height: 100px;
+      width: auto;
+    }
+    .el-badge__content{
+      transform: translate(50%, -50%) !important;
+    }
+  }
+}
+
+.tabel-height-400{
+  max-height: 400px;
+  overflow: auto;
+}
+
+.__view{
+  width: auto !important;
+}
+
+.slide-badge{
+  .el-badge__content{
+    transform: translate(100%, 20%) !important;
+  }
+  &.badge-hide{
+    .el-badge__content{
+      display: none !important;
+    }
+  }
+  .is-dot{
+    transform: translate(100%, 150%) !important;
+  }
+}
+
+.detail-dialog-wrap{
+  height: 65vh;
+}
+
+// 取消抽屉标题FOCUS样式
+.el-drawer__header span:focus{
+  outline: none;
+}

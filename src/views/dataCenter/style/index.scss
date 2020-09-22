@@ -1,0 +1,31 @@
+.chart-simple{
+  padding: 20px;
+  >*:not(:first-of-type){
+    margin-top: 20px;
+  }
+  .radio-group{
+    margin: 20px 0 10px;
+  }
+  .chart-filter{
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #ddd;
+    .time-range-wrap{
+      .break{
+        margin: 0 20px;
+      }
+      .getChartData{
+        margin-left: 20px;
+      }
+    }
+  }
+  .table-wrap{
+    .table-head{
+      line-height: 42px;
+      background-color: #ddd;
+      padding: 0 10px;
+      justify-content: space-between;
+    }
+  }
+}
